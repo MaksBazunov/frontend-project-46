@@ -12,7 +12,9 @@ program.version('output the version number');
 program.option('-f, --format <type>','output format');
 program.arguments('<file1> <file2>');
 
-program.action(genDiff)
+program.action((file1,file2)=>{
+console.log(genDiff(file1,file2))
+})
    
      
-program.parse(process.argv);
+program.parse();

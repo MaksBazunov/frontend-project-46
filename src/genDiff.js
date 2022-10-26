@@ -47,7 +47,7 @@ const fileKeys = _.union(_.keys(formatFile1), _.keys(formatFile2)).sort();
     }
    const result = fileKeys.map((key) => getDiff(key));
  
-  console.log(`{\n${result.join('\n')}\n}`)
+  return `{\n${result.join('\n')}\n}`
 
 };
 export default genDiff;
