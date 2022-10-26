@@ -8,7 +8,7 @@ link:
 	npm link
 
 lint:
-	npx eslint 
+	npx eslint .
 	
 jest:
 	npx jest
