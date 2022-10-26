@@ -10,5 +10,8 @@ link:
 lint:
 	npx eslint .
 	
-jest:
-	npx jest --watch
+test:
+	npx jest 
+
+test-coverage:
+	npx jest --coverage
