@@ -11,4 +11,4 @@ lint:
 	npx eslint .
 	
 jest:
-	npx jest
+	npx jest --watch
