@@ -44,16 +44,11 @@ const fileKeys = _.union(_.keys(formatFile1), _.keys(formatFile2)).sort();
     if (formatFile1[key] !== formatFile2[key]){
         return `  - ${key} : ${formatFile1[key]} \n  + ${key} : ${formatFile2[key]}`;
       }
-}
+    }
    const result = fileKeys.map((key) => getDiff(key));
-   
+ 
   console.log(`{\n${result.join('\n')}\n}`)
 
-}
+};
 export default genDiff;
-
-
-
-
-
 
