@@ -15,4 +15,4 @@ program.arguments('<file1> <file2>');
 program.action(genDiff)
    
      
-program.parse();
+program.parse(dsgsd);
