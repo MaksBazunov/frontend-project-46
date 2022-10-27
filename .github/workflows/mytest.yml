@@ -41,8 +41,8 @@ jobs:
         # Publish code coverage on Code Climate
         # https://github.com/paambaati/codeclimate-action
         uses: paambaati/codeclimate-action@v3.0.0
-      env:
-       
+
+        
         with:
           coverageCommand: make test-coverage
           debug: true
