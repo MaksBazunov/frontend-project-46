@@ -37,11 +37,14 @@ jobs:
       - run: make lint
       #- run: make test
       # - run: make test-coverage
-      - steps:
       - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v2.5.0
-     
+        # Publish code coverage on Code Climate
+        # https://github.com/paambaati/codeclimate-action
+        uses: paambaati/codeclimate-action@v3.2.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         
         with:
           coverageCommand: make test-coverage
+
           debug: true
