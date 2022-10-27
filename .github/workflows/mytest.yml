@@ -42,7 +42,7 @@ jobs:
         # https://github.com/paambaati/codeclimate-action
         uses: paambaati/codeclimate-action@v3.2.0
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          CC_TEST_REPORTER_ID: ${{ secrets.frontend-hexlet-46 }}
         
         with:
           coverageCommand: make test-coverage
