@@ -14,7 +14,7 @@
 3. Run: make install.
 4. Run: make link.
 
-## This program to compare two files, for examle:
+## This program to compare two files, for example:
    type in console: genDiff yourFile1 yourFile2 
 
 ## Asciinemas:
