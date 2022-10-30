@@ -1,26 +1,13 @@
 import path from 'path';
-import process from 'node:process';
 import fs from 'fs';
 import _ from 'lodash';
-import yaml from 'js-yaml';
+import  getFormatFile  from "../parsers.js";
 
 
 const getFileData = (filePath)=>{
   const absolutPathFile = path.resolve( process.cwd(), filePath);
   return fs.readFileSync(absolutPathFile,'utf-8');
 }
-
-
-const getFormatFile =(fileData,filePath)=>{
-  const fileExt = path.extname(filePath).substring(1)
-  if(fileExt === 'json') {
-    return JSON.parse(fileData)
-  }
-  if(fileExt === 'yaml') {
-    return yaml.load(fileData)
-  }
-}
-
 
 export const getDiff = (filePath1,filePath2)=>{
 

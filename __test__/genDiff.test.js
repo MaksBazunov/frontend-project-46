@@ -19,3 +19,18 @@ test('diff files', () => {
     expect(actual).toBe(readFile('expected_file.txt'));
   });
   
+
+
+test('diff files', () => {
+    
+  const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'));
+
+  expect(actual).toBe(readFile('expected_file.txt'));
+});
+
+test('diff files', () => {
+    
+  const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('file2.json'));
+
+  expect(actual).toBe(readFile('expected_file.txt'));
+});
