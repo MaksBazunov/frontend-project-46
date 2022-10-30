@@ -2,6 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import _ from 'lodash';
 import  getFormatFile  from "../parsers.js";
+import process from "node"
 
 
 const getFileData = (filePath)=>{
