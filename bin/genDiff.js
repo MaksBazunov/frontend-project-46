@@ -17,4 +17,4 @@ console.log(getDiff(file1,file2))
 })
    
      
-program.parse(process.argv);
+program.parse();
