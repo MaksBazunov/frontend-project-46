@@ -17,5 +17,8 @@
 ## This program to compare two files, for example:
    type in console: genDiff yourFile1 yourFile2 
 
-## Asciinemas:
+## Asciinemas 1:
 <a href="https://asciinema.org/a/f64KZb9NAf0HXc4lvB4hApTge" target="_blank"><img src="https://asciinema.org/a/f64KZb9NAf0HXc4lvB4hApTge.svg" /></a>
+
+## Asciinemas 2:
+<a href="https://asciinema.org/a/s945el5NsgVFMFi8HGkB8iNaf" target="_blank"><img src="https://asciinema.org/a/s945el5NsgVFMFi8HGkB8iNaf.svg" /></a>

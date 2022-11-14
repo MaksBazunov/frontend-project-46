@@ -8,8 +8,8 @@
     "genDiff": "bin/genDiff.js"
   },
   "jest": {
-   "testEnvironment": "node",
-   "transform":{}
+    "testEnvironment": "node",
+    "transform": {}
   },
   "scripts": {
     "test": "jest"
@@ -18,13 +18,14 @@
     "type": "git",
     "url": "git+https://github.com/MaksBazunov/frontend-project-46.git"
   },
-  "author": "",
+  "author": "Maks Bazunov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MaksBazunov/frontend-project-46/issues"
   },
   "homepage": "https://github.com/MaksBazunov/frontend-project-46#readme",
   "dependencies": {
+    "@hexlet/immutable-fs-trees": "^0.7.1",
     "commander": "^9.4.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",

@@ -1,42 +1,27 @@
 import path from 'path';
 import fs from 'fs';
 import _ from 'lodash';
-import  getFormatFile  from "../parsers.js";
+import  parse  from "../parsers.js";
 import  process from 'node:process';
+import genKey from '../genKey.js'
+import stylish from '../formatter/stylish.js'
 
-
+const getDiff = (filepath1, filepath2, format = 'stylish') => {
 const getFileData = (filePath)=>{
   const absolutPathFile = path.resolve( process.cwd(), filePath);
   return fs.readFileSync(absolutPathFile,'utf-8');
 }
 
-export const getDiff = (filePath1,filePath2)=>{
+const fileData1 = getFileData(filepath1);
+const fileData2 = getFileData(filepath2);
 
-const fileData1 = getFileData(filePath1);
-const fileData2 = getFileData(filePath2);
+const parseFile1 = parse(fileData1,filepath1);
+const parseFile2 = parse(fileData2,filepath2);
 
-const formatFile1 = getFormatFile(fileData1,filePath1);
-const formatFile2 = getFormatFile(fileData2,filePath2);
-
-const fileKeys = _.union(_.keys(formatFile1), _.keys(formatFile2)).sort();
-  const Diffkey = (key) => {
-    if (!_.has(formatFile1, key)) {
-      return `  + ${key} : ${formatFile2[key] }`;
-    }
-    if (!_.has(formatFile2, key)) {
-      return  `  - ${key} : ${formatFile1[key]}`;
-    }
-    if (formatFile1[key] === formatFile2[key]){
-      return `    ${key} : ${formatFile1[key]}`;
-    }
-    if (formatFile1[key] !== formatFile2[key]){
-        return `  - ${key} : ${formatFile1[key]} \n  + ${key} : ${formatFile2[key]}`;
-      }
-    }
-   const result = fileKeys.map((key) => Diffkey(key));
- 
-  return `{\n${result.join('\n')}\n}`
-
+const key = genKey(parseFile1, parseFile2);
+if(format === 'stylish'){
+  return stylish (key);
+}
 };
-export default getDiff;
 
+export default getDiff;

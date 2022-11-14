@@ -3,7 +3,7 @@ import path from 'path';
 
 
 
-const getFormatFile =(fileData,filePath)=>{
+const parse =(fileData,filePath)=>{
     const fileExt = path.extname(filePath).substring(1)
     if (fileExt === '') {
       return JSON.parse(fileData)
@@ -19,4 +19,4 @@ const getFormatFile =(fileData,filePath)=>{
     }
   };
 
-  export default getFormatFile;
+  export default parse;

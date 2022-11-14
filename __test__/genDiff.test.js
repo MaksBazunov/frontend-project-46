@@ -14,23 +14,23 @@ const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf8')
 
 test('diff files', () => {
     
-    const actual = getDiff(getFixturePath('file1.json'), getFixturePath('file2.json'));
+    const actual = getDiff(getFixturePath('filepath1.json'), getFixturePath('filepath2.json'));
 
     expect(actual).toBe(readFile('expected_file.txt'));
   });
   
 
 
-test('diff files', () => {
+test('diff files 1', () => {
     
   const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'));
 
   expect(actual).toBe(readFile('expected_file.txt'));
 });
 
-test('diff files', () => {
+test('diff files 2', () => {
     
-  const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('file2.json'));
+  const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('filepath2.json'));
 
   expect(actual).toBe(readFile('expected_file.txt'));
 });
