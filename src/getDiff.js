@@ -1,6 +1,5 @@
 import path from 'path';
 import fs from 'fs';
-import _ from 'lodash';
 import  parse  from "../parsers.js";
 import  process from 'node:process';
 import genKey from '../genKey.js'
