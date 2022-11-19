@@ -12,25 +12,48 @@ const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', 
 const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf8');
 
 
-test('diff files', () => {
+test('diff format stylish', () => {
     
-    const actual = getDiff(getFixturePath('filepath1.json'), getFixturePath('filepath2.json'));
+    const actual = getDiff(getFixturePath('filepath1.json'), getFixturePath('filepath2.json'), 'stylish');
 
-    expect(actual).toBe(readFile('expected_file.txt'));
+    expect(actual).toBe(readFile('stylishFile.txt'));
   });
   
 
 
-test('diff files 1', () => {
+test('diff format stylish 1', () => {
     
-  const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'));
+  const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'), 'stylish');
 
-  expect(actual).toBe(readFile('expected_file.txt'));
+  expect(actual).toBe(readFile('stylishFile.txt'));
 });
 
-test('diff files 2', () => {
+test('diff format stylish 2', () => {
     
-  const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('filepath2.json'));
+  const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('filepath2.json'),'stylish');
 
-  expect(actual).toBe(readFile('expected_file.txt'));
+  expect(actual).toBe(readFile('stylishFile.txt'));
+});
+
+test('diff format plain', () => {
+    
+  const actual = getDiff(getFixturePath('filepath1.json'), getFixturePath('filepath2.json'), 'plain');
+
+  expect(actual).toBe(readFile('plainFile.txt'));
+});
+
+
+
+test('diff format plain 1', () => {
+  
+const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'), 'plain');
+
+expect(actual).toBe(readFile('plainFile.txt'));
+});
+
+test('diff format plain 2', () => {
+  
+const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('filepath2.json'),'plain');
+
+expect(actual).toBe(readFile('plainFile.txt'));
 });
