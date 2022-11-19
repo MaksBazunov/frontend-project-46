@@ -18,6 +18,7 @@
   
 1. for comparison in the format 'stylish' type in console: genDiff --format stylish yourFilePath1 yourFilePath2 
 2. for comparison in the format 'plain' type in console: genDiff --format plain yourFilePath1 yourFilePath2 
+3. for comparison in the format 'json' type in console: genDiff --format json yourFilePath1 yourFilePath2
 
 ## Asciinemas 1:
 <a href="https://asciinema.org/a/f64KZb9NAf0HXc4lvB4hApTge" target="_blank"><img src="https://asciinema.org/a/f64KZb9NAf0HXc4lvB4hApTge.svg" /></a>
@@ -27,3 +28,6 @@
 
 ## Asciinemas 3:
 <a href="https://asciinema.org/a/anA42YzEmffIFxGxu8t9pqtLi" target="_blank"><img src="https://asciinema.org/a/anA42YzEmffIFxGxu8t9pqtLi.svg" /></a>
+
+## Asciinemas 4:
+<a href="https://asciinema.org/a/gDSS2EV53tgsyZmybqFvIMyS6" target="_blank"><img src="https://asciinema.org/a/gDSS2EV53tgsyZmybqFvIMyS6.svg" /></a>

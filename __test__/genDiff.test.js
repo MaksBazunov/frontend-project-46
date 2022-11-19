@@ -57,3 +57,26 @@ const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('filepath2.js
 
 expect(actual).toBe(readFile('plainFile.txt'));
 });
+
+test('diff format json', () => {
+    
+  const actual = getDiff(getFixturePath('filepath1.json'), getFixturePath('filepath2.json'), 'json');
+
+  expect(actual).toBe(readFile('jsonFile.txt'));
+});
+
+
+
+test('diff format json 1', () => {
+  
+const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'), 'json');
+
+expect(actual).toBe(readFile('jsonFile.txt'));
+});
+
+test('diff format json 2', () => {
+  
+const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('filepath2.json'),'json');
+
+expect(actual).toBe(readFile('jsonFile.txt'));
+});
