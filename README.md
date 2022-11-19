@@ -16,8 +16,8 @@
 
 ## This program to compare two files, for example:
   
-for comparison in the format 'stylish' type in console: genDiff --format stylish yourFilePath1 yourFilePath2 
-for comparison in the format 'plain' type in console: genDiff --format plain yourFilePath1 yourFilePath2 
+1. for comparison in the format 'stylish' type in console: genDiff --format stylish yourFilePath1 yourFilePath2 
+2. for comparison in the format 'plain' type in console: genDiff --format plain yourFilePath1 yourFilePath2 
 
 ## Asciinemas 1:
 <a href="https://asciinema.org/a/f64KZb9NAf0HXc4lvB4hApTge" target="_blank"><img src="https://asciinema.org/a/f64KZb9NAf0HXc4lvB4hApTge.svg" /></a>
