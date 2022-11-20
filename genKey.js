@@ -19,7 +19,7 @@ const genKey = (parseFile1, parseFile2) => {
     return { name, state: 'unchanged', value: array1[name] };
   };
   const keys = _.sortBy(_.union(Object.keys(parseFile1), Object.keys(parseFile2)));
- 
+
   return keys.map((key) => iter(parseFile1, parseFile2, key));
 };
 
