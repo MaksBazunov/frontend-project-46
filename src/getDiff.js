@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-import process from 'node: process';
+import process from 'node:process';
 import parse  from '../parsers.js';
 import genKey from '../genKey.js';
 import renderFormat from '../formatter/index.js';
