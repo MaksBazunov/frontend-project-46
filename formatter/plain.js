@@ -2,16 +2,16 @@ import _ from 'lodash';
 
 const stringify = (value) => {
   if (_.isObject(value)) {
-      return '[complex value]';
+    return '[complex value]';
   }
   if (_.isBoolean(value)) {
-      return value;
+    return value;
   }
   if (_.isNumber(value)) {
-      return value;
+    return value;
   }
   if (_.isNull(value)) {
-      return 'null';
+    return 'null';
   }
   return `'${value}'`;
 };

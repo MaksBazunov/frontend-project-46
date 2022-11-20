@@ -13,8 +13,8 @@ const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf8')
 test('diff format stylish', () => {
   const actual = getDiff(getFixturePath('filepath1.json'), getFixturePath('filepath2.json'), 'stylish');
   expect(actual).toBe(readFile('stylishFile.txt'));
-  });
-  
+});
+
 test('diff format stylish 1', () => {
   const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'), 'stylish');
   expect(actual).toBe(readFile('stylishFile.txt'));
@@ -36,7 +36,7 @@ test('diff format plain 1', () => {
 });
 
 test('diff format plain 2', () => {
-  const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('filepath2.json'),'plain');
+  const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('filepath2.json'), 'plain');
   expect(actual).toBe(readFile('plainFile.txt'));
 });
 
@@ -51,6 +51,6 @@ test('diff format json 1', () => {
 });
 
 test('diff format json 2', () => {
-  const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('filepath2.json'),'json');
+  const actual = getDiff(getFixturePath('file1.yml'), getFixturePath('filepath2.json'), 'json');
   expect(actual).toBe(readFile('jsonFile.txt'));
 });
