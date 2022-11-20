@@ -16,18 +16,18 @@
 
 ## This program to compare two files, for example:
   
-1. for comparison in the format 'stylish' type in console: genDiff --format stylish yourFilePath1 yourFilePath2 
-2. for comparison in the format 'plain' type in console: genDiff --format plain yourFilePath1 yourFilePath2 
-3. for comparison in the format 'json' type in console: genDiff --format json yourFilePath1 yourFilePath2
+1. for comparison in the format 'stylish' type in console: gendiff --format stylish yourFilePath1 yourFilePath2 
+2. for comparison in the format 'plain' type in console: gendiff --format plain yourFilePath1 yourFilePath2 
+3. for comparison in the format 'json' type in console: gendiff --format json yourFilePath1 yourFilePath2
 
 ## Asciinemas 1:
-<a href="https://asciinema.org/a/f64KZb9NAf0HXc4lvB4hApTge" target="_blank"><img src="https://asciinema.org/a/f64KZb9NAf0HXc4lvB4hApTge.svg" /></a>
+<a href="https://asciinema.org/a/E9IJ0hzQVNRl4HD7gZ9EfKgrF" target="_blank"><img src="https://asciinema.org/a/E9IJ0hzQVNRl4HD7gZ9EfKgrF.svg" /></a>
 
 ## Asciinemas 2:
-<a href="https://asciinema.org/a/s945el5NsgVFMFi8HGkB8iNaf" target="_blank"><img src="https://asciinema.org/a/s945el5NsgVFMFi8HGkB8iNaf.svg" /></a>
+<a href="https://asciinema.org/a/9DSCYMufZKJqeGyfHT1yP5YNN" target="_blank"><img src="https://asciinema.org/a/9DSCYMufZKJqeGyfHT1yP5YNN.svg" /></a>
 
 ## Asciinemas 3:
-<a href="https://asciinema.org/a/anA42YzEmffIFxGxu8t9pqtLi" target="_blank"><img src="https://asciinema.org/a/anA42YzEmffIFxGxu8t9pqtLi.svg" /></a>
+<a href="https://asciinema.org/a/Vgfu6N0qwe3AMV24U93wAwUE2" target="_blank"><img src="https://asciinema.org/a/Vgfu6N0qwe3AMV24U93wAwUE2.svg" /></a>
 
 ## Asciinemas 4:
-<a href="https://asciinema.org/a/gDSS2EV53tgsyZmybqFvIMyS6" target="_blank"><img src="https://asciinema.org/a/gDSS2EV53tgsyZmybqFvIMyS6.svg" /></a>
+<a href="https://asciinema.org/a/wCpoFmk7g5eZdbsRiS4P1TFpS" target="_blank"><img src="https://asciinema.org/a/wCpoFmk7g5eZdbsRiS4P1TFpS.svg" /></a>

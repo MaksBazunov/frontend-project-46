@@ -1,5 +1,5 @@
-import { test, expect } from '@jest/globals';
-import path from 'path';
+
+import  path  from 'path';
 import { fileURLToPath } from 'node:url';
 import getDiff from '../src/getDiff';
 import fs from 'fs'
