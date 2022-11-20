@@ -2,11 +2,12 @@ import _ from 'lodash';
 
 const genKey = (parseFile1, parseFile2) => {
   const iter = (array1, array2, name) => {
-    
-    if (!_.has(array1, name)){
-       return { name, state: 'added', value: array2[name] }}
-    if (!_.has(array2, name)){
-       return { name, state: 'deleted', value: array1[name] }}
+    if (!_.has(array1, name)) {
+      return { name, state: 'added', value: array2[name] };
+    }
+    if (!_.has(array2, name)) {
+      return { name, state: 'deleted', value: array1[name] };
+    }
     if (_.isObject(array1[name]) && _.isObject(array2[name])) {
       return { name, state: 'nested', children: genKey(array1[name], array2[name]) };
     }
