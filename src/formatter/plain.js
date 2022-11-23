@@ -7,9 +7,6 @@ const stringify = (value) => {
   if (_.isBoolean(value)) {
     return value;
   }
-  if (_.isNumber(value)) {
-    return value;
-  }
   if (_.isNull(value)) {
     return 'null';
   }
@@ -17,15 +14,17 @@ const stringify = (value) => {
 };
 
 const plain = (diffKeys, key = []) => _.compact(diffKeys.map((elem) => {
+  const keyElem = [...key, elem.name].join('.');
+
   switch (elem.state) {
     case 'nested':
       return plain(elem.children, [...key, elem.name]);
     case 'added':
-      return `Property '${[...key, elem.name].join('.')}' was added with value: ${stringify(elem.value)}`;
+      return `Property '${keyElem}' was added with value: ${stringify(elem.value)}`;
     case 'deleted':
-      return `Property '${[...key, elem.name].join('.')}' was removed`;
+      return `Property '${keyElem}' was removed`;
     case 'changed':
-      return `Property '${[...key, elem.name].join('.')}' was updated. From ${stringify(elem.previousValue)} to ${stringify(elem.currentValue)}`;
+      return `Property '${keyElem}' was updated. From ${stringify(elem.previousValue)} to ${stringify(elem.currentValue)}`;
     default:
       return '';
   }

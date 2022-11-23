@@ -12,10 +12,7 @@ const setIndent = (depth, spaces = 2) => ' '.repeat(depth * indent - spaces);
 
 const stringify = (value, depth) => {
   if (!_.isObject(value)) return value;
-  return `{\n${Object.entries(value).map(([key, val]) => `${setIndent(depth)}  ${key}: ${stringify(
-    val,
-    depth + 1,
-  )
+  return `{\n${Object.entries(value).map(([key, val]) => `${setIndent(depth)}  ${key}: ${stringify(val, depth + 1,)
   }`).join('\n')}\n${setIndent(depth - 1)}  }`;
 };
 
@@ -26,13 +23,11 @@ const formatTree = (elem, depth) => {
     case 'unchanged':
       return `${setIndent(depth)}${symbols[elem.state]} ${elem.name}: ${stringify(elem.value, depth + 1)}`;
     case 'changed':
-      return `${setIndent(depth)}${symbols.deleted} ${elem.name}: ${stringify(
-        elem.previousValue,
-        depth + 1,
+      return `${setIndent(depth)}${symbols.deleted} ${elem.name}: ${stringify(elem.previousValue, depth + 1,
       )}\n${setIndent(depth)}${symbols.added} ${elem.name}: ${stringify(elem.currentValue, depth + 1)}`;
     case 'nested':
-      return `${setIndent(depth)}${symbols[elem.state]} ${elem.name}: {\n${elem.children
-        .map((element) => formatTree(element, depth + 1)).join('\n')}\n  ${setIndent(depth)}}`;
+      return `${setIndent(depth)}${symbols[elem.state]} ${elem.name}: {\n${elem.children.map((element) => 
+        formatTree(element, depth + 1)).join('\n')}\n  ${setIndent(depth)}}`;
     default:
       throw new Error('Unknown state!');
   }
