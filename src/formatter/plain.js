@@ -14,17 +14,16 @@ const stringify = (value) => {
 };
 
 const plain = (diffKeys, key = []) => _.compact(diffKeys.map((elem) => {
-  const keyElem = [...key, elem.name].join('.');
-
+  
   switch (elem.state) {
     case 'nested':
       return plain(elem.children, [...key, elem.name]);
     case 'added':
-      return `Property '${keyElem}' was added with value: ${stringify(elem.value)}`;
+      return `Property '${[...key, elem.name].join('.')}' was added with value: ${stringify(elem.value)}`;
     case 'deleted':
-      return `Property '${keyElem}' was removed`;
+      return `Property '${[...key, elem.name].join('.')}' was removed`;
     case 'changed':
-      return `Property '${keyElem}' was updated. From ${stringify(elem.previousValue)} to ${stringify(elem.currentValue)}`;
+      return `Property '${[...key, elem.name].join('.')}' was updated. From ${stringify(elem.previousValue)} to ${stringify(elem.currentValue)}`;
     default:
       return '';
   }
