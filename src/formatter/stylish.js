@@ -20,7 +20,6 @@ const stringify = (value, depth) => {
 };
 
 const formatTree = (elem, depth) => {
-
   const dataUnchanged = `${setIndent(depth)}${symbols[elem.state]} ${elem.name}: ${stringify(elem.value, depth + 1)}`;
   const dataDeleted = `${setIndent(depth)}${symbols.deleted} ${elem.name}: ${stringify(
     elem.previousValue,
@@ -28,7 +27,6 @@ const formatTree = (elem, depth) => {
   )}`;
   const dataAdded = `${setIndent(depth)}${symbols.added} ${elem.name}: ${stringify(elem.currentValue, depth + 1)}`;
   const dataNested = `${setIndent(depth)}${symbols[elem.state]} ${elem.name}`;
-  
   switch (elem.state) {
     case 'added':
     case 'deleted':
@@ -37,7 +35,7 @@ const formatTree = (elem, depth) => {
     case 'changed':
       return `${dataDeleted}\n${dataAdded}`;
     case 'nested':
-      return  `${dataNested}: {\n${elem.children
+      return `${dataNested}: {\n${elem.children
         .map((element) => formatTree(element, depth + 1)).join('\n')}\n  ${setIndent(depth)}}`;
     default:
       throw new Error('Unknown state!');

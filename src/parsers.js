@@ -1,7 +1,7 @@
 import yaml from 'js-yaml';
 
 const parse = (fileData, fileFormat) => {
-  switch (fileFormat){
+  switch (fileFormat) {
     case '':
       return JSON.parse(fileData);
     case 'json':
