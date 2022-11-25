@@ -7,6 +7,9 @@ const stringify = (value) => {
   if (_.isBoolean(value)) {
       return value;
   }
+  if (_.isNumber(value)) {
+    return value;
+  }
   if (_.isNull(value)) {
       return 'null';
   }
