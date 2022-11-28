@@ -15,14 +15,12 @@ const expectedJson = readFile('jsonFile.txt');
 const expectedPlain = readFile('plainFile.txt');
 const expectedStylish = readFile('stylishFile.txt');
 
-describe('diff test', () => {
-  test.each(formats)('test format %s', (format) => {
-    const filepath1 = getFixturePath(`file1.${format}`);
-    const filepath2 = getFixturePath(`file2.${format}`);
-
-    expect(getDiff(filepath1, filepath2, 'stylish')).toBe(expectedStylish);
-    expect(getDiff(filepath1, filepath2, 'plain')).toBe(expectedPlain);
-    expect(getDiff(filepath1, filepath2, 'json')).toBe(expectedJson);
-    expect(getDiff(filepath1, filepath2)).toBe(expectedStylish);
-  });
+test.each(formats)('test format %s', (format) => {
+  const filepath1 = getFixturePath(`file1.${format}`);
+  const filepath2 = getFixturePath(`file2.${format}`);
+  expect(getDiff(filepath1, filepath2, 'stylish')).toBe(expectedStylish);
+  expect(getDiff(filepath1, filepath2, 'plain')).toBe(expectedPlain);
+  expect(getDiff(filepath1, filepath2, 'json')).toBe(expectedJson);
+  expect(getDiff(filepath1, filepath2)).toBe(expectedStylish);
 });
+
