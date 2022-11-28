@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import process from 'node:process';
 import parse from './parsers.js';
-import genKey from './genKey.js';
+import genTree from './genTree.js';
 import renderFormat from './formatter/index.js';
 
 const getFileData = (filePath) => {
@@ -20,7 +20,7 @@ const getDiff = (filepath1, filepath2, format = 'stylish') => {
   const parseFile1 = parse(fileData1, fileFormat1);
   const parseFile2 = parse(fileData2, fileFormat2);
 
-  const diffKeys = genKey(parseFile1, parseFile2);
+  const diffKeys = genTree(parseFile1, parseFile2);
 
   return renderFormat(diffKeys, format);
 };
