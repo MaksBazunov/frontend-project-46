@@ -13,7 +13,7 @@ const setIndent = (depth, spaces = 2) => ' '.repeat(depth * indent - spaces);
 const stringify = (value, depth) => {
   if (!_.isObject(value)) return value;
   const arrayElem = Object.entries(value).map(([key, val]) => `${setIndent(depth)}  ${key}: ${stringify(val, depth + 1)}`);
-  return ['{', ...arrayElem, `${setIndent(depth - 1)}  }`, ] .join('\n');
+  return ['{', ...arrayElem, `${setIndent(depth - 1)}  }`].join('\n');
 };
 
 const formatTree = (elem, depth) => {
