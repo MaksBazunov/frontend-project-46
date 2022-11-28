@@ -3,7 +3,7 @@ import fs from 'fs';
 import process from 'node:process';
 import parse from './parsers.js';
 import genTree from './genTree.js';
-import renderFormat from './formatter/index.js';
+import renderFormat from './formatter/rendFormat.js';
 
 const getFileData = (filePath) => {
   const absolutPathFile = path.resolve(process.cwd(), filePath);

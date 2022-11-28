@@ -8,8 +8,10 @@ const renderFormat = (diffKeys, format) => {
       return json(diffKeys);
     case 'plain':
       return plain(diffKeys);
-    default:
+    case 'stylish':
       return stylish(diffKeys);
+    default:
+      throw new Error('Error: wrong diff format');
   }
 };
 

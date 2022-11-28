@@ -4,13 +4,13 @@ const stringify = (value) => {
   if (_.isObject(value)) {
     return '[complex value]';
   }
-  if (_.isBoolean(value) || _.isNumber(value)) {
-    return value;
+  if (_.isString(value)) {
+    return `'${value}'`;
   }
   if (_.isNull(value)) {
     return 'null';
   }
-  return `'${value}'`;
+  return value;
 };
 
 const plain = (diffKeys, key = []) => _.compact(diffKeys.map((elem) => {
