@@ -11,21 +11,21 @@ const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', 
 const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf8');
 
 const extensions = [
-  ['json', 'json', undefined, 'stylishFile.txt'], 
-  ['yml', 'yml', undefined, 'stylishFile.txt'], 
+  ['json', 'json', undefined, 'stylishFile.txt'],
+  ['yml', 'yml', undefined, 'stylishFile.txt'],
   ['json', 'yml', undefined, 'stylishFile.txt'],
 
-  ['json', 'json', 'stylish', 'stylishFile.txt'], 
-  ['yml', 'yml', 'stylish', 'stylishFile.txt'], 
+  ['json', 'json', 'stylish', 'stylishFile.txt'],
+  ['yml', 'yml', 'stylish', 'stylishFile.txt'],
   ['json', 'yml', 'stylish', 'stylishFile.txt'],
 
-  ['json', 'json', 'plain', 'plainFile.txt'], 
-  ['yml', 'yml', 'plain', 'plainFile.txt'], 
+  ['json', 'json', 'plain', 'plainFile.txt'],
+  ['yml', 'yml', 'plain', 'plainFile.txt'],
   ['json', 'yml', 'plain', 'plainFile.txt'],
 
-  ['json', 'json', 'json', 'jsonFile.txt'], 
-  ['yml', 'yml', 'json', 'jsonFile.txt'], 
-  ['json', 'yml', 'json', 'jsonFile.txt']
+  ['json', 'json', 'json', 'jsonFile.txt'],
+  ['yml', 'yml', 'json', 'jsonFile.txt'],
+  ['json', 'yml', 'json', 'jsonFile.txt'],
 ];
 
 test.each(extensions)('Diff test (%s, %s, %s)', (file1Extension, file2Extension, format, resultFile) => {
